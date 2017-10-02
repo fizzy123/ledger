@@ -38,11 +38,11 @@ Routes require an API key in the `X-APIKEY` header. You can use the API key that
 
 # Routes #
 
-## GET Balances ##
-`GET /`
-URL Params:
-`date` - Specify date for balances
-Output:
+## Get Balances ##
+`GET /`  
+URL Params:  
+`date` - Specify date for balances  
+Output:  
 ```
 {
   'Jack': 250.00,
