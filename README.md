@@ -40,9 +40,9 @@ Routes require an API key in the `X-APIKEY` header. You can use the API key that
 
 ## Get Balances ##
 `GET /`  
-URL Params:  
+**URL Params**  
 `date` - Specify date for balances  
-Output:  
+**Output**  
 ```
 {
   'Jack': 250.00,
