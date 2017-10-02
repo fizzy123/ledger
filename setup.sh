@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Script to setup service for the first time. Takes in a csvfile as an argument or assumes that the csv file is at ./ledger.csv.
+
 set -e
 if [ $# -eq 0 ]; then
   CSVFILE='ledger.csv'

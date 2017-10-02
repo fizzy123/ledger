@@ -18,14 +18,20 @@ def import_data(filename):
         Transaction.query.delete()
         reader = list(csv.reader(csvfile, delimiter=','))
         for row in reader:
-            # Check if sender and recipiant are same. Don't do anything in that case
+            # Check that row has 4 values. If not, the csv was formatted improperly.
             if len(row) != 4:
                 # pylint: disable=line-too-long
                 raise AssertionError('Each row should have 4 comma seperated values. Row: {}'.format(row))
+
+            # Ensure that sender and recipiant are NOT same.
             if row[2] != row[1]:
+                # Verify date
                 if not re.match(r"^\d{4}-\d{2}-\d{2}$", row[0]):
                     # pylint: disable=line-too-long
                     raise AssertionError('First value in csv should be a date with format YYYY-MM-DD. Row: {}'.format(row))
+
+                # Create two transaction rows, one for the person losing money
+                # and one for the person gaining it
                 transaction = Transaction(date=row[0],
                                           recipiant=row[2],
                                           amount=float(row[3]))

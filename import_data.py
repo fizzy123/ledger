@@ -1,4 +1,4 @@
-# Generates and provides an api key to access the API with.
+# wrapper for the module function import_data
 import sys
 from ledger.functions import import_data
 

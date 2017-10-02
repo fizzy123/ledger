@@ -1,4 +1,4 @@
-# Generates and provides an api key to access the API with.
+# Wrapper for the module function generate_api_key
 from ledger.functions import generate_api_key
 
 if __name__ == '__main__':

@@ -1,3 +1,5 @@
+# Transaction model schema
+
 from ledger import db
 
 class Transaction(db.Model):
