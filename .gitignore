@@ -1,0 +1,6 @@
+env
+ledger/settings.py
+*.pyc
+.cache
+*.swp
+*.csv

@@ -1,0 +1,15 @@
+DEBUG = False
+TESTING = False
+SECRET_KEY = "RANDOMLY GENERATED UUID"
+
+POSTGRES = {
+  'user': 'user',
+  'pw': 'password',
+  'db': 'ledger',
+  'host': 'localhost'
+}
+
+SQLALCHEMY_DATABASE_URI = 'postgresql://{}:{}@{}/{}'.format(POSTGRES['user'], POSTGRES['pw'], POSTGRES['host'], POSTGRES['db'])
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379

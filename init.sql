@@ -1,0 +1,4 @@
+CREATE DATABASE ledger;
+CREATE USER ledger
+ALTER USER ledger WITH ENCRYPTED PASSWORD '{password}';
+ALTER DATABASE ledger OWNER TO ledger;
